@@ -2,7 +2,7 @@
 
 BIOS 4803 / BIOL 8803, Georgia Tech, Spring 2027. Dr. Sean Anderson and Dr. James Stroud.
 
-**Live site:** https://jameststroud.github.io/GToriginsofbiodiversity/
+**Live site:** https://www.thestroudlab.com/GToriginsofbiodiversity/ (the address jameststroud.github.io/GToriginsofbiodiversity/ redirects here, because the GitHub account uses the lab domain)
 
 This is a plain website (HTML, CSS, and a little JavaScript). There is no build step. **Nearly everything you will ever change lives in one file: [`data/course.js`](data/course.js).** You can edit it in the browser on github.com, and the site updates on its own.
 
@@ -57,7 +57,7 @@ Set `show: true` to display a slim gold banner at the top of every page. Set `sh
 
 Each of Weeks 1 to 11 has a drafted **framing paragraph** (`intro`) and **open questions** (`unknown`). Drafts are **hidden from students**.
 
-1. **Preview:** open [`drafts.html`](https://jameststroud.github.io/GToriginsofbiodiversity/drafts.html) to read every draft on one page, or add `&drafts=1` to a week page address, for example `week.html?n=5&drafts=1`. Drafts appear with an amber "DRAFT, not visible to students" badge.
+1. **Preview:** open [`drafts.html`](https://www.thestroudlab.com/GToriginsofbiodiversity/drafts.html) to read every draft on one page, or add `&drafts=1` to a week page address, for example `week.html?n=5&drafts=1`. Drafts appear with an amber "DRAFT, not visible to students" badge.
 2. **Edit** the `text` (or the `questions`) in that week's entry in `course.js`.
 3. **Approve:** change `status: "draft"` to `status: "approved"`. Commit. It now shows to everyone.
 
