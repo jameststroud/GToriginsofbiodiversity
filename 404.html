@@ -9,7 +9,10 @@
   (function () {
     if (location.protocol === "file:") return;
     var root = "/";
-    if (/\.github\.io$/.test(location.hostname)) {
+    var m = location.pathname.match(/^\/GToriginsofbiodiversity\//i);
+    if (m) {
+      root = m[0];
+    } else if (/\.github\.io$/.test(location.hostname)) {
       var first = location.pathname.split("/")[1];
       if (first) root = "/" + first + "/";
     }
