@@ -288,9 +288,6 @@
   function renderSchedule(main) {
     var st = semesterStatus();
     var t = today();
-    var legend = Object.keys(C.themes).filter(function (k) { return k !== "exam"; }).map(function (k) {
-      return '<li><span class="swatch" style="background:' + C.themes[k].color + '"></span>' + esc(C.themes[k].label) + "</li>";
-    }).join("");
     var items = [];
     C.weeks.forEach(function (w) {
       var cls = "week-card";
@@ -298,18 +295,12 @@
       if (w.tue && t > weekEnd(w)) cls += " past";
       if (st.kind === "current" && st.week === w) { cls += " current"; flag = '<span class="now-flag">This week</span>'; }
       else if (st.kind === "final" && w.isExam) { cls += " current"; flag = '<span class="now-flag">Coming up</span>'; }
-      var tags = "";
-      if (w.concepts.length) {
-        var shown = w.concepts.slice(0, 4).map(function (cn) { return '<span class="tag">' + esc(cn) + "</span>"; }).join("");
-        var more = w.concepts.length > 4 ? '<span class="tag tag-more">+' + (w.concepts.length - 4) + " more</span>" : "";
-        tags = "<div>" + shown + more + "</div>";
-      }
       var nr = w.readings.length;
       var meta = w.isExam ? "Oral exam, Qualifying Exam style" : nr + " required reading" + (nr === 1 ? "" : "s");
       var dates = w.tue ? "Tue " + fmt(w.tue).slice(4) + "<br>Thu " + fmt(w.thu).slice(4) : esc(w.datesLabel || "TBA");
       items.push('<li class="' + cls + '" style="--band:' + themeColor(w.theme) + '">' +
         '<div><div class="wk">Week ' + w.n + '</div><div class="dates">' + dates + "</div></div>" +
-        '<div><h2><a href="' + weekHref(w.n) + '">' + esc(w.title) + "</a>" + flag + "</h2>" + tags + '<p class="meta">' + meta + "</p></div></li>");
+        '<div><h2><a href="' + weekHref(w.n) + '">' + esc(w.title) + "</a>" + flag + "</h2>" + '<p class="meta">' + meta + "</p></div></li>");
 
       if (C.midterm && C.midterm.afterWeek === w.n) {
         items.push('<li class="week-card exam-item" style="--band:' + themeColor("exam") + '"><div><div class="wk">Exam</div><div class="dates">' + esc(C.midterm.date || "Date TBA") + "</div></div>" +
@@ -331,7 +322,6 @@
     });
     main.innerHTML = '<div class="wrap"><h1>Schedule</h1>' +
       '<p class="muted prose">' + esc(C.course.meets) + ". This is a dynamic schedule and will be updated as the semester progresses.</p>" +
-      '<ul class="legend" aria-label="Theme colors">' + legend + "</ul>" +
       '<ol class="week-list">' + items.join("") + "</ol></div>";
   }
 
