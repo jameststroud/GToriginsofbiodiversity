@@ -147,7 +147,6 @@
   var ICON = {
     pdf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8.5 16.5v-4h1.2a1.2 1.2 0 0 1 0 2.4H8.5M13 12.5v4h.8a1.6 1.6 0 0 0 1.6-1.6v-.8a1.6 1.6 0 0 0-1.6-1.6zM17.5 12.5h-1.5v4M16 14.5h1.2"/></svg>',
     link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>',
-    help: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>'
   };
 
   /* ---------- Site chrome: announcement, header, nav, footer ---------- */
@@ -447,11 +446,6 @@
             '<a class="tag" href="concepts.html#' + slug(cn) + '">' + esc(cn) + "</a>";
         }).join("") + "</div></section>");
     }
-    if (visible(w.unknown) && w.unknown.questions && w.unknown.questions.length) {
-      parts.push('<section class="unknown-panel' + (isApproved(w.unknown) ? "" : " is-draft") + '" aria-labelledby="wk-h">' + draftBadge(w.unknown) +
-        '<div class="panel-head">' + ICON.help + '<h2 id="wk-h">What we don\'t know</h2></div><ol>' +
-        w.unknown.questions.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ol></section>");
-    }
     var prev = getWeek(w.n - 1), next = getWeek(w.n + 1);
     parts.push('<nav class="pager" aria-label="Week navigation">' +
       (prev ? '<a class="prev" href="' + weekHref(prev.n) + '"><span class="dir">' + ARROW_L + "Previous week</span>Week " + prev.n + ": " + esc(prev.title) + "</a>" : "") +
@@ -586,15 +580,14 @@
       main.innerHTML = '<div class="wrap narrow"><h1>Draft review</h1><p>This instructor page shows drafts only in the browser, with JavaScript turned on.</p></div>';
       return;
     }
-    var blocks = C.weeks.filter(function (w) { return w.intro || w.unknown; }).map(function (w) {
+    var blocks = C.weeks.filter(function (w) { return w.intro; }).map(function (w) {
       function status(b) { return b ? (isApproved(b) ? '<span class="tag">approved</span>' : '<span class="draft-badge">DRAFT</span>') : ""; }
       return '<section class="draft-week"><h2><a href="' + weekFile(w.n) + '?drafts=1">Week ' + w.n + ": " + esc(w.title) + "</a></h2>" +
         (w.intro ? "<h3>Framing paragraph " + status(w.intro) + '</h3><p class="intro">' + esc(w.intro.text) + "</p>" : "") +
-        (w.unknown ? "<h3>What we don't know " + status(w.unknown) + '</h3><div class="unknown-panel" style="margin-top:0.5rem"><div class="panel-head">' + ICON.help + "<h4>What we don't know</h4></div><ol>" +
-          w.unknown.questions.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ol></div>" : "") + "</section>";
+        "</section>";
     }).join("");
     var nDraft = 0;
-    C.weeks.forEach(function (w) { [w.intro, w.unknown].forEach(function (b) { if (b && !isApproved(b)) nDraft++; }); });
+    C.weeks.forEach(function (w) { if (w.intro && !isApproved(w.intro)) nDraft++; });
     main.innerHTML = '<div class="wrap narrow"><h1>Draft review</h1><p class="notice">Instructor page, not linked from the site. ' + nDraft +
       ' items are still drafts and hidden from students. To approve one, edit its text in <code>data/course.js</code> and change <code>"draft"</code> to <code>"approved"</code>. See README.md, section 4.</p>' + blocks + "</div>";
   }

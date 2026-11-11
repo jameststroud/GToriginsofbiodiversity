@@ -62,18 +62,16 @@ announcement: {
 
 Set `show: true` to display a slim gold banner at the top of every page. Set `show: false` to hide it.
 
-## 4. Week summaries and "What we don't know" questions
+## 4. Week summaries
 
-Each of Weeks 1 to 11 has a summary paragraph (`intro`) and a short list of open questions (`unknown`, shown as the "What we don't know" panel). Each has a status:
+Each of Weeks 1 to 11 has a summary paragraph (`intro`) with a status:
 
 - `status: "approved"`: shown to everyone. All 11 summaries are approved.
-- `status: "draft"`: hidden from students. The open questions are drafts, awaiting your review.
+- `status: "draft"`: hidden from students.
 
-**To review drafts,** open [`drafts.html`](https://www.thestroudlab.com/GToriginsofbiodiversity/drafts.html), or add `?drafts=1` to a week's address (for example `week-05.html?drafts=1`) to see them in place with an amber "DRAFT" badge. Drafts are never written into the published pages, but anyone who opens `course.js` in this public repository can read them.
+**To edit,** change the `text` between the quote marks. If your text needs a double quote inside it, type `\"`; apostrophes are fine as they are.
 
-**To edit,** change the `text` (or the `questions`) between the quote marks. If your text needs a double quote inside it, type `\"`; apostrophes are fine as they are.
-
-**To publish,** change `"draft"` to `"approved"` and commit. **To hide** something again, change it back to `"draft"`. To remove a week's panel entirely, use `unknown: null`.
+**To hide** a summary while you rework it, change `"approved"` to `"draft"`. You can still preview it on [`drafts.html`](https://www.thestroudlab.com/GToriginsofbiodiversity/drafts.html), or by adding `?drafts=1` to the week's address (for example `week-05.html?drafts=1`), where it carries an amber "DRAFT" badge. Drafts are never written into the published pages, but anyone who opens `course.js` in this public repository can read them. Change it back to `"approved"` to publish.
 
 ## 5. Assign graduate presenters
 

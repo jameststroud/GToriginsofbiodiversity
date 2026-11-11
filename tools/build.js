@@ -94,7 +94,6 @@ C.weeks.forEach((w) => written.push(render("week.html", "week-" + pad2(w.n) + ".
 const drafts = [];
 C.weeks.forEach((w) => {
   if (w.intro && w.intro.status !== "approved" && w.intro.text) drafts.push(w.intro.text);
-  if (w.unknown && w.unknown.status !== "approved") (w.unknown.questions || []).forEach((q) => drafts.push(q));
 });
 const escHTML = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 for (const f of written) {

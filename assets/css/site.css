@@ -14,9 +14,6 @@
   --gold-tint: #EFE7C6;
   --rule: #DCD5BC;           /* warm gray hairline */
   --rule-strong: #C9C0A3;
-  --unknown-bg: #EEEAF7;
-  --unknown-ink: #3E2F6B;
-  --unknown-border: #CFC6EA;
   --draft-bg: #FAEEDA;
   --draft-ink: #633806;
   --radius: 11px;
@@ -298,16 +295,6 @@ h1.hero-q { font-family: var(--serif); font-weight: 400; font-style: italic; fon
 .pager .next { margin-left: auto; text-align: right; }
 @media (max-width: 520px) { .pager a { max-width: 100%; flex: 1 1 100%; } .pager .next { text-align: left; } }
 
-.unknown-panel {
-  background: var(--unknown-bg); color: var(--unknown-ink); border: 1px solid var(--unknown-border);
-  border-radius: 14px; padding: 1.5rem 1.6rem 1.3rem; margin: 2.4rem 0 1rem;
-}
-.unknown-panel .panel-head { display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; }
-.unknown-panel .panel-head svg { width: 26px; height: 26px; flex: none; }
-.unknown-panel h2 { color: var(--unknown-ink); font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0.09em; text-transform: uppercase; margin: 0; }
-.unknown-panel ol { list-style: none; margin: 0; padding: 0; }
-.unknown-panel li { font-family: var(--serif); font-size: 1.28rem; line-height: 1.45; padding: 0.55rem 0; border-top: 1px solid var(--unknown-border); max-width: 62ch; }
-.unknown-panel li:first-child { border-top: 0; padding-top: 0; }
 
 /* ---------- Tables ---------- */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--card); }
@@ -359,7 +346,7 @@ html { scroll-behavior: smooth; }
   .cite .doi-text { display: inline; }
   .readings li { break-inside: avoid; }
   a { color: #000; text-decoration: none; }
-  .unknown-panel, .card, .notice { border: 1px solid #999; background: #fff; }
+  .card, .notice { border: 1px solid #999; background: #fff; }
   main { padding: 0; }
 }
 

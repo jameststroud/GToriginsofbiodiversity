@@ -10,7 +10,7 @@
    - After you commit, the live site updates in a minute or two.
 
    Draft text:
-   Every "intro" and "unknown" has a status: "draft" (hidden from students)
+   Every "intro" has a status: "draft" (hidden from students)
    or "approved" (shown). Drafts are
    hidden from students. Preview them by adding ?drafts=1 to a page
    address, or open drafts.html. When a draft is ready, edit the text and
@@ -132,10 +132,6 @@ window.COURSE = {
       concepts: ["unequal distribution of biodiversity", "measures of diversity", "pre-Darwinian views",
                  "Darwin's insight and what he lacked", "natural selection", "the Modern Synthesis"],
       intro: { status: "approved", text: "In many different ways, life is not spread evenly across the planet. Before Darwin, most naturalists saw that variety as fixed (Linnaeus) or as directed toward ever greater complexity (Lamarck), rather than as the product of an undirected process. Darwin (1859) famously supplied that process: evolution by natural selection. Yet Darwin lacked a working theory of inheritance, which was a critical piece of information to provide a complete theory. In the early to mid-20th century, with the rise of genetics, the architects of the Modern Synthesis closed this gap, fully formalizing a “neo-Darwinian” theory of evolution. A century after Darwin, G. Evelyn Hutchinson (1959) asked the question this course is built around: why are there so many kinds of animals? Whether the Modern Synthesis, built around genes and natural selection, is enough to answer it remains an active debate, and one we will return to all semester." },
-      unknown: { status: "draft", questions: [
-        "Is the unequal distribution of biodiversity the product of a few general processes, or of many separate histories?",
-        "Is a theory built around genes and natural selection enough to explain why there are so many kinds of animals, or does it need a rethink (Laland et al. 2014)?"
-      ] },
       image: { file: "images/week01-origin-diagram-1859.jpg",
                alt: "Darwin's branching diagram from On the Origin of Species: lettered lineages splitting over time, with many branches ending in extinction.",
                caption: "The only figure in On the Origin of Species (1859): Darwin's diagram of lineages diverging over time, with many ending in extinction.",
@@ -155,11 +151,6 @@ window.COURSE = {
       concepts: ["species concepts", "speciation mechanisms", "reproductive isolation (pre- vs. post-zygotic; intrinsic vs. extrinsic)",
                  "the speciation continuum", "geography of speciation", "taxonomy vs. evolutionary biology"],
       intro: { status: "approved", text: "Species are the currency of biodiversity, yet biologists still disagree about what a species actually is. Ernst Mayr defined species by reproductive isolation, coining the term “biological species concept,” while other concepts emphasize ecology, morphology, or ancestry, revealing that the needs of taxonomy and of evolutionary biology do not always align. Speciation is best viewed as a continuum, from populations that interbreed freely to lineages that never will. Along it, reproductive isolation accumulates through barriers that act before or after fertilization (prezygotic and postzygotic), arising either from intrinsic genetic incompatibilities or from the external environment. However, geography is also of fundamental importance: allopatric speciation (divergence in geographic isolation) has long been treated as the default, due to ongoing debates on the degree to which sympatric speciation may occur. But, how often is speciation the result of divergent natural selection between environments, rather than separation alone, that drives two populations apart?" },
-      unknown: { status: "draft", questions: [
-        "Is there a point along the speciation continuum beyond which divergence can no longer be reversed?",
-        "How often does divergent natural selection between environments, rather than geographic separation alone, drive reproductive isolation?",
-        "Can a single species concept serve both taxonomy and evolutionary biology?"
-      ] },
       image: { file: "images/week02-species-pair.jpg",
                alt: "Two small, nearly identical olive-brown flycatchers held side by side in a hand.",
                caption: "Sibling species: the Alder Flycatcher (Empidonax alnorum) and the Willow Flycatcher (Empidonax traillii). The two look almost identical and were once treated as a single species; they are told apart mainly by song.",
@@ -181,11 +172,6 @@ window.COURSE = {
       concepts: ["secondary contact as the \"moment of truth\"", "species fusion", "competitive and reproductive exclusion",
                  "character displacement", "reinforcement", "species sorting", "hybridization", "genomic introgression"],
       intro: { status: "approved", text: "Divergence in isolation (i.e., allopatry) is only half the story. When diverged populations meet again in space, secondary contact becomes the moment of truth. Perhaps, the most exciting situation any evolutionary biologist can witness. These two “incipient species” (i.e., populations) may hybridize and fuse back into one species, one may exclude the other through competition or reproductive interference, or both may persist side by side. But, importantly, interactions during secondary contact can themselves drive evolution. Brown and Wilson (1956) described character displacement, in which coexisting species diverge where they overlap, and Dobzhansky championed reinforcement, in which selection against unfit hybrids completes reproductive isolation. However, one curiosity revealed in contemporary evolutionary biology is that even species that remain distinct may occasionally exchange genes through introgression. Increasingly, we suspect that the patterns we see in nature reflect species sorting as much as evolutionary change: contact may determine which species pairs persist at all, not just how they evolve once they meet." },
-      unknown: { status: "draft", questions: [
-        "When we see character displacement in nature, how often is it divergence after contact, and how often is it the sorting of species that were already different?",
-        "How common is reinforcement, and how would we recognize it in the wild?",
-        "When does genomic introgression fuel diversification, and when does it collapse species back together?"
-      ] },
       image: { file: "images/week03-character-displacement.jpg",
                alt: "Three-panel figure: two threespine sticklebacks of different shapes on a palm; two spadefoot toad tadpoles, one with a much broader head; and five weasel skulls arranged from smallest to largest.",
                caption: "Classic examples of ecological character displacement, in which competing species diverge where they live together. (A) Benthic (i) and limnetic (ii) threespine sticklebacks, which have diverged in body shape and size where they co-occur. (B) Where Mexican and Plains spadefoot toads share ponds, Mexican spadefoot tadpoles more often develop into omnivore morphs (i) and Plains spadefoot tadpoles into carnivore morphs (ii). (C) Skulls of North American weasels, with each sex treated as a separate \"morphospecies\": (i) female least weasel, (ii) female ermine, (iii) male ermine, (iv) female long-tailed weasel, and (v) male long-tailed weasel. Neighboring sizes differ by roughly equal ratios.",
@@ -206,11 +192,6 @@ window.COURSE = {
                  "environmental filtering", "null models", "neutral theory", "modern coexistence theory",
                  "niche and resource partitioning", "beta vs. alpha diversity"],
       intro: { status: "approved", text: "Why do some species occur together while others never do? Stemming from Hutchinson's concept of an ecological “niche”, and MacArthur's (1958) subsequent example of warblers foraging in different parts of the same spruce trees, suggested that competition sorts species into communities by their differences. Yet patterns such as forbidden pairs (ecologically similar species that appear never to co-occur) sparked a heated debate through the late 1970s and early 1980s over whether chance alone could produce them, establishing null models as a standard tool of community ecology (the “null model wars”!) Hubbell's neutral theory pushed the question further: how much of community structure can we explain if species are treated as ecologically equivalent? Most recently, greater recognition has been given to the role of history, as the order in which species arrive (priority effects) may shape a community as much as environmental filtering does, helping explain why sites with similar conditions can differ so much in which species they hold (beta diversity)." },
-      unknown: { status: "draft", questions: [
-        "Are communities assembled mainly by niche differences or by neutral processes, or is that the wrong way to frame the question?",
-        "If priority effects can send similar sites down different paths, how predictable is community assembly?",
-        "How can modern coexistence theory be tested in diverse communities, where measuring every interaction is impossible?"
-      ] },
       image: { file: "images/week04-bci-plot.jpg",
                alt: "Stacked maps of a 50-hectare forest plot; each layer shows the positions of individual trees of one species.",
                caption: "Each layer maps every tree of one species in the 50-hectare forest dynamics plot on Barro Colorado Island, Panama. Some species grow in tight clusters; others are scattered across the whole plot.",
@@ -231,11 +212,6 @@ window.COURSE = {
       concepts: ["natural selection", "local adaptation", "the Lande-Arnold statistical framework", "selection gradients",
                  "heritability", "phenotypic plasticity", "measuring selection in the wild", "paradox of stasis"],
       intro: { status: "approved", text: "Darwin thought natural selection far too slow to watch: “We see nothing of these slow changes in progress, until the hand of time has marked the long lapse of ages.” Contemporary evolutionary biology has surprisingly suggested Darwin was wrong. From the 1970s onward, field biologists such as Peter and Rosemary Grant documented intense selection and adaptive change on observable timescales. Pivotal to the development of these ideas, Lande and Arnold (1983) provided a statistical framework for measuring the form and strength of selection directly in the wild. However, this revelation that strong natural selection can be detected in wild populations leaves an enduring puzzle: if selection in the wild can be strong, and many traits are heritable, why do many (most?) populations change far less than these measurements predict? Resolving this “paradox of stasis”, and understanding where phenotypic plasticity fits into it, is one of the central challenges in evolutionary biology today." },
-      unknown: { status: "draft", questions: [
-        "If selection in the wild can be strong and many traits are heritable, why do so many populations change so little?",
-        "Where does phenotypic plasticity fit into the paradox of stasis?",
-        "Does selection always beget evolution? If not, what stops it?"
-      ] },
       image: { file: "images/week05-gould-finches-1845.jpg",
                alt: "John Gould's engraving of four Galapagos finch heads with beaks of different sizes, from Darwin's Journal of Researches.",
                caption: "Galapagos finch heads, from the second edition of Darwin's Journal of Researches (1845).",
@@ -258,11 +234,6 @@ window.COURSE = {
                  "adaptive divergence", "resource partitioning", "parallel and convergent evolution", "adaptive landscape",
                  "non-adaptive radiation"],
       intro: { status: "approved", text: "Why do some lineages diversify into dozens of ecologically distinct species while their close relatives do not? The answer canonized by George Gaylord Simpson, and made the centerpiece of an ecological theory of adaptive radiation by Dolph Schluter, is ecological opportunity: access to evolutionarily-accessible resources (i.e., those unused, or underused, by competitors). Simpson regarded access to “ecological opportunity” occurring in various scenarios: the colonization of a new depauperate region (e.g., a newly-formed island), surviving a mass extinction, or evolving a “key innovation” that allowed a lineage to use a new part of the environment or resource spectrum. But opportunity does not always lead to radiation, and not every radiation is adaptive. Why?" },
-      unknown: { status: "draft", questions: [
-        "Why does ecological opportunity lead to adaptive radiation in some lineages but not in others?",
-        "How much of the diversity produced by radiations reflects ecological divergence, and how much reflects non-adaptive processes (Rundell and Price 2009)?",
-        "Can selection measured in single populations explain the radiation of an entire clade (Grant and Grant 2024)?"
-      ] },
       image: { file: "images/week06-cichlids.jpg",
                alt: "Map of Africa ringed by cichlid fishes from West, Southern and East Africa and Lakes Tanganyika, Malawi and Victoria, above an evolutionary tree scaled in millions of years.",
                caption: "African cichlid fishes, a model system for adaptive radiation: lineages from rivers across the continent and from the three great East African lakes (Tanganyika, Malawi, and Victoria), with their evolutionary tree beneath, scaled in millions of years.",
@@ -286,11 +257,6 @@ window.COURSE = {
                  "endemism", "dispersal limitation", "vicariance", "range expansions and contractions",
                  "geology and biodiversity (Wallace's Line, plate tectonics)"],
       intro: { status: "approved", text: "Alfred Russel Wallace divided the world into zoogeographical regions, recognizing that where species live carries the signature of geological history. His line through the Malay Archipelago, separating Asian from Australasian faunas across a strait only a few dozen kilometers wide, remains one of biogeography’s starkest boundaries, a divide later explained by plate tectonics and by deep water that stayed open even when Ice Age sea levels fell. At the global scale, the latitudinal diversity gradient (more species toward the tropics) is one of the most general patterns in ecology, yet ecologists have weighed competing explanations for much of the past century. In the late 1960’s, Dan Janzen argued that because tropical organisms experience little seasonal change in temperature, they should be physiologically constrained to tropical environments and so unable to disperse out into temperate regions. In doing so, Janzen presented an important new hypothesis that may explain the latitudinal diversity gradient, linking thermal physiology to dispersal limitation and, potentially, to endemism. These ideas continue to be important today as we consider the role of contemporary climate change on the redistribution of global biodiversity." },
-      unknown: { status: "draft", questions: [
-        "Why are there more species toward the tropics, and can the competing explanations ever be separated?",
-        "How strongly do thermal tolerances limit dispersal, and through it, where species occur?",
-        "How will contemporary climate change redistribute the biodiversity patterns that Wallace mapped?"
-      ] },
       images: [
         { file: "images/week07-wallace-regions-1876.jpg",
           alt: "Wallace's world map, colored by zoogeographical region, with ocean depths shaded in blue.",
@@ -316,11 +282,6 @@ window.COURSE = {
       concepts: ["dispersal", "colonization", "extinction", "island syndrome", "equilibrium theory", "species-area relationships",
                  "isolation effects", "disharmonious faunas", "relaxation curves", "nested subsets"],
       intro: { status: "approved", text: "Unlike other science fields such as maths and physics, ecology and evolution hold few laws. One of them may be the species-area rule, in which species richness increases with area. However, this is not true of all regions. Some islands of the same size can have different numbers of species; why? MacArthur and Wilson (1963) reduced the answer to a balance between colonization and extinction, predicting that species number depends on island area and isolation rather than on which species are present. Islands represent a filtered, not random, sample of mainland diversity: good dispersers arrive while poor ones rarely do, producing disharmonious faunas (missing whole groups common on the mainland) and the nested subsets that biogeographers have long recognized. Once established, colonists often evolve in predictable ways (the island syndrome of giants, dwarfs, and tameness), and on large enough islands speciation begins to add species from within (an “evolutionary” species-area concept). Today, as humans carry species from island to island, does the equilibrium MacArthur and Wilson envisioned still hold?" },
-      unknown: { status: "draft", questions: [
-        "Is island diversity ever truly at equilibrium, or are many islands still adjusting to past changes in area and isolation?",
-        "At what island size does speciation within the island begin to outpace colonization from outside (Losos and Schluter 2000)?",
-        "As humans carry species from island to island, what now sets the number of species an island holds?"
-      ] },
       image: { file: "images/week08-bahamas-cay.jpg",
                alt: "A tiny, low, rocky island in shallow water, with a person standing on it.",
                caption: "A small Bahamian cay. Islands like this act as natural replicates for testing island biogeography.",
@@ -342,11 +303,6 @@ window.COURSE = {
       concepts: ["phylogenetic reconstruction", "measuring phylogenetic diversity", "trait evolution", "over- and underdispersion",
                  "phylogenetic signal", "comparative methods", "diversification rates", "key innovations and diversity"],
       intro: { status: "approved", text: "Species are not independent data points. Because relatives share traits through common ancestry, Felsenstein (1985) showed that any comparison across species must account for phylogeny, turning comparative biology into a phylogenetic discipline. Phylogenies now let us reconstruct how traits evolved, measure phylogenetic diversity and signal, ask whether communities are phylogenetically clustered or overdispersed (made up of closer or more distant relatives than expected by chance), and estimate rates of speciation and extinction from the shape of the tree. However, each of these tasks come with assumptions and caveats, which are important to be aware of and discuss." },
-      unknown: { status: "draft", questions: [
-        "Do key innovations cause bursts of diversification, or do we mostly notice them in lineages that happened to radiate (Rabosky 2017)?",
-        "How reliably can rates of speciation and extinction be estimated from trees of living species alone?",
-        "When a community is phylogenetically clustered or overdispersed, how can we tell which process produced the pattern?"
-      ] },
       image: { file: "images/week09-haeckel-tree-1866.jpg",
                alt: "Ernst Haeckel's 1866 branching tree of the plant kingdom, drawn as a gnarled trunk with labeled branches.",
                caption: "Haeckel's 1866 tree of the plant kingdom (Stammbaum des Pflanzenreichs), shown here as a historical object. Haeckel also promoted racist and eugenic ideas, which this course does not endorse.",
@@ -365,11 +321,6 @@ window.COURSE = {
       concepts: ["Tinbergen's four questions", "adaptive behavior", "phenotypic plasticity", "behavioral syndromes",
                  "ecological and evolutionary consequences of behavior", "sociality", "altruism", "inclusive fitness", "kin selection"],
       intro: { status: "approved", text: "Why do birds sing, lizards perform push-up displays, and gazelles stot (leap stiff-legged in front of predators)? Each question has four correct answers, which Niko Tinbergen famously separated into mechanism, development, function, and evolutionary history, arguing that a full account of behavior needs all four. Behavior is often the most flexible part of the phenotype, allowing animals to respond to new conditions and, in doing so, to alter the selection they experience. Sociality poses a sharper puzzle, one that troubled Darwin: how can selection favor behavior that helps others at a cost to the actor? W. D. Hamilton’s answer, inclusive fitness and kin selection, transformed the study of social behavior. Yet Gould and Lewontin’s (1979) warning against assuming that every trait is an adaptation still hangs over adaptive explanations of behavior." },
-      unknown: { status: "draft", questions: [
-        "Does behavior speed up evolution by exposing animals to new selection, or slow it down by letting them avoid selection?",
-        "How do we test whether a behavior is an adaptation rather than a by-product, as Gould and Lewontin (1979) urged?",
-        "When is inclusive fitness the most useful framework for explaining sociality?"
-      ] },
       image: { file: "images/week10-san-marco-pendentives.jpg",
                alt: "Sculpted spandrels above an arched doorway at the Basilica of San Marco in Venice.",
                caption: "Spandrels in the architect's sense: the curved spaces left between an arch and its rectangular frame, here filled with sculpture. Gould and Lewontin (1979) used the spandrels of San Marco to argue that some features are by-products of structure rather than adaptations.",
@@ -389,11 +340,6 @@ window.COURSE = {
                  "contemporary evolution", "community and ecosystem consequences of evolution",
                  "anthropogenic selective pressures", "predictive frameworks"],
       intro: { status: "approved", text: "If evolution can happen on ecological timescales, can evolution in turn change ecology? Hutchinson (1965) pictured an ecological theater hosting an evolutionary play, an image long read as ecology setting the stage on which evolution slowly unfolds. The discovery of contemporary evolution blurred that division, raising the possibility of eco-evolutionary feedbacks, in which ecological change drives evolution and evolution in turn reshapes populations, communities, and ecosystems. Guppies in the streams of Trinidad, where predation differs sharply above and below waterfalls, have become a flagship test of the idea, however even in this system it is unclear to what extent such “eco-evolutionary dynamics” occur at a meaningful level. With human activity now imposing strong selection on many species, the central question is practical as well as theoretical: when is evolutionary change large enough, and fast enough, to matter ecologically, and can we predict it?" },
-      unknown: { status: "draft", questions: [
-        "How common are eco-evolutionary feedbacks in nature, and when are they strong enough to matter ecologically?",
-        "Can we predict evolution under human-imposed selection, or is contemporary evolution too contingent to forecast?",
-        "When ecology and evolution change on the same timescale, which one is driving the other?"
-      ] },
       image: { file: "images/week11-trinidad-stream.jpg",
                alt: "Two photos of shaded, rocky forest streams.",
                caption: "Forest streams in Trinidad, where guppies have become a model system for studying eco-evolutionary dynamics.",
@@ -412,7 +358,7 @@ window.COURSE = {
     {
       n: 12, title: "Final oral exam", tue: "", thu: "", datesLabel: "Dates TBA", theme: "exam", isExam: true,
       concepts: [],
-      intro: null, unknown: null,
+      intro: null,
       image: null,
       schematic: null,
       examText: [

@@ -85,7 +85,7 @@ need(Array.isArray(C.weeks) && C.weeks.length > 0, "course.js: the list of weeks
     ["authors", "title"].forEach((k) => need(r && typeof r[k] === "string" && r[k].trim(), `course.js: ${where} is missing its "${k}".`, r && r.title));
     need(r && r.year, `course.js: ${where} is missing its "year".`, r && r.title);
   });
-  [["intro", w.intro], ["unknown", w.unknown]].forEach(([k, b]) => {
+  [["intro", w.intro]].forEach(([k, b]) => {
     if (b && b.status !== "draft" && b.status !== "approved")
       error(`course.js: ${label} ${k} has status "${b.status}". It must be exactly "draft" or "approved".`, FILE, lineOf(`status: "${b.status}"`));
   });
