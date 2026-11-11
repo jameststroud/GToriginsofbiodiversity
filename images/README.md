@@ -1,6 +1,6 @@
 # Images
 
-Every image slot on the site hides cleanly when its file is missing, so the site looks finished with no photos at all. To add an image, upload a file here with **exactly** the filename below (see README.md, how-to 6). Recommended size: about **1600 px wide**, JPEG for photos, PNG for line art. Keep files under about 500 KB.
+Every image named in `course.js` must be uploaded; the automatic check reports any that are missing. To add an image, upload a file here with **exactly** the filename below (see README.md, how-to 6). Recommended size: about **1600 px wide**, JPEG for photos, PNG for line art. Keep files under about 500 KB.
 
 Captions, credits, and alt text for each image live in `data/course.js` (the `image` entry for each week). If you supply your own photo, edit its `caption` and `credit` there.
 
@@ -15,7 +15,7 @@ All files were resized (max 1600 px wide; portraits 600 px square) and saved und
 | `week02-species-pair.jpg` | Week 2 | Alder and Willow Flycatchers. The Ohio State University Museum of Biological Diversity blog, "Examples of sibling species" (2015). **Check reuse permission** | Credited |
 | `week03-character-displacement.jpg` | Week 3 | Figure I of Stuart & Losos (2013), *Trends in Ecology & Evolution* 28:402-408 (© Elsevier; photos L. Southcott, D. Pfennig, S. Meiri). Cropped from the article PDF. **Check reuse permission** | Credited |
 | `week06-cichlids.jpg` | Week 6 (moved from Week 3) | **Published figure: needs a source credit and permission check** | Posted without credit |
-| `week04-bci-plot.jpg` | Week 4 (shown taller: `tall: true`) | **Published figure: needs a source credit and permission check** | Posted without credit |
+| `week04-bci-plot.jpg` | Week 4 | **Published figure: needs a source credit and permission check** | Posted without credit |
 | `week05-gould-finches-1845.jpg` | Week 5 | John Gould, in Darwin, *Journal of Researches* 2nd ed. (1845). Public domain (Wikimedia Commons) | Done |
 | `week06-anolis-ecomorphs.png` | Not used (replaced by the cichlid figure on Week 6) | Published figure: needs a source credit if reused | Kept in case you want it elsewhere; delete if not |
 | `week07-wallace-regions-1876.jpg` | Week 7 (first image) | Wallace, *The Geographical Distribution of Animals*, German edition (title on the map is in German). Public domain | Done |
@@ -26,7 +26,7 @@ All files were resized (max 1600 px wide; portraits 600 px square) and saved und
 | `week11-trinidad-stream.jpg` | Week 11 | **Needs photo credit** (looks like a two-panel published figure) | Posted without credit |
 | `anderson.jpg`, `stroud.jpg` | Home, instructor cards | Instructors' own | Done |
 | `anolis research small bahamian key.webp` | Not used | | Uploaded without an expected name; tell Claude where it should go, or delete it |
-| `week12-santa-rosalia-pond.jpg` | Week 12 | | Not uploaded (optional); the slot stays hidden |
+| `week12-santa-rosalia-pond.jpg` | Week 12 (optional) | | Not uploaded. Week 12 has `image: null`; to add a photo, upload it and give Week 12 an `image` entry like the other weeks |
 
 To add a credit, find the image's `credit: ""` in `data/course.js` and type the credit between the quotes.
 
