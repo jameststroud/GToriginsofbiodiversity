@@ -10,7 +10,7 @@
    - After you commit, the live site updates in a minute or two.
 
    Draft text:
-   Every "intro" and "unknown" starts as status: "draft". Drafts are
+   Every "intro" starts as status: "draft". Drafts are
    hidden from students. Preview them by adding ?drafts=1 to a page
    address, or open drafts.html. When a draft is ready, edit the text and
    change "draft" to "approved".
@@ -113,11 +113,7 @@ window.COURSE = {
       concepts: ["Unequal distribution of biodiversity", "measures of diversity", "pre-Darwinian views",
                  "Darwin's insight and what he lacked", "natural selection", "the Modern Synthesis"],
       intro: { status: "draft", text: "Life is not spread evenly across the planet, and it never has been. Darwin (1859) supplied a mechanism for how new kinds arise, natural selection, yet he lacked a working theory of inheritance, leaving a gap that the Modern Synthesis would close only in the following century. Exactly a hundred years later, Hutchinson (1959) asked the question this course is built around: why are there so many kinds of animals? Laland et al. (2014) then ask whether the theory we inherited is still enough, opening a debate that runs through every week that follows." },
-      unknown: { status: "draft", questions: [
-        "Is the unequal distribution of biodiversity the product of a few general processes, or of many separate histories?",
-        "Does evolutionary theory need a rethink (Laland et al. 2014), or can developmental bias, plasticity, and niche construction be absorbed into the Modern Synthesis as it stands?",
-        "How many kinds of organisms are there, and why that number rather than another?"
-      ] },
+      unknown: null,
       image: { file: "images/week01-origin-diagram-1859.png",
                alt: "The branching diagram of divergence from Darwin's On the Origin of Species, lettered lineages splitting and going extinct through time.",
                caption: "The only figure in On the Origin of Species (1859): lineages diverging and going extinct over time.",
@@ -137,11 +133,7 @@ window.COURSE = {
       concepts: ["Species concepts", "speciation mechanisms", "reproductive isolation (pre- vs. post-zygotic; intrinsic vs. extrinsic)",
                  "the speciation continuum", "geography of speciation", "taxonomy vs. evolutionary biology"],
       intro: { status: "draft", text: "Species are the currency of biodiversity, yet biologists still disagree about what a species is. Ehrlich and Raven (1969) argued that gene flow is less important in speciation than the neo-Darwinians thought, challenging a central assumption of the Modern Synthesis. Schluter (2001) made the case that divergent natural selection between environments can drive the evolution of reproductive isolation. But how often does it? Anderson and Weir (2022) put that question to allopatric speciation in vertebrates, testing an idea that has long been easier to state than to measure." },
-      unknown: { status: "draft", questions: [
-        "Is there a point along the speciation continuum beyond which divergence becomes irreversible?",
-        "How often is divergent ecological adaptation a cause of reproductive isolation, rather than a difference that accumulates after isolation is already in place?",
-        "Can a single species concept serve both taxonomy and evolutionary biology, or do the two need different definitions?"
-      ] },
+      unknown: null,
       image: { file: "images/week02-species-pair.jpg", alt: "A sister-species pair from Dr. Anderson's study system.",
                caption: "A sister-species pair.", credit: "" },
       schematic: { file: "assets/img/schematics/speciation-continuum.svg",
@@ -161,11 +153,7 @@ window.COURSE = {
       concepts: ["Secondary contact as the \"moment of truth\"", "species fusion", "competitive and reproductive exclusion",
                  "character displacement", "reinforcement", "species sorting", "hybridization", "genomic introgression"],
       intro: { status: "draft", text: "Divergence in isolation is only half the story. When populations that diverged apart meet again, secondary contact becomes the moment of truth: the two may fuse, one may exclude the other, or both may persist side by side. Brown and Wilson (1956) proposed that coexisting species should diverge where they overlap, and Servedio and Noor (2003) review how selection against hybrids may complete reproductive isolation through reinforcement. Anderson and Matute (2025) recast secondary sympatry as a sorting process, shifting attention from how species change after contact toward which species survive contact at all." },
-      unknown: { status: "draft", questions: [
-        "When we see character displacement in nature, how often is it divergence after contact, and how often is it sorting, in which only species that were already different manage to coexist?",
-        "How common is reinforcement, and how would we tell it apart from other routes to reproductive isolation in the wild?",
-        "When does genomic introgression fuel diversification, and when does it collapse species back together?"
-      ] },
+      unknown: null,
       image: { file: "images/week03-cichlids.jpg", alt: "African cichlid fishes.", caption: "African cichlid fishes.", credit: "" },
       schematic: null,
       readings: [
@@ -183,11 +171,7 @@ window.COURSE = {
                  "environmental filtering", "null models", "neutral theory", "modern coexistence theory",
                  "niche and resource partitioning", "beta vs. alpha diversity"],
       intro: { status: "draft", text: "Why do some species occur together while others never do? Patterns such as forbidden pairs suggested that competition sculpts communities, but Connor and Simberloff (1979) asked whether the same patterns could arise by chance, igniting a long debate over null models that Lewin (1983) chronicled. Neutral theory (Rosindell, Hubbell and Etienne 2011) pushes the question further: how much of community structure can we explain if species are treated as ecologically equivalent? Fukami (2015) adds history, suggesting that the order in which species arrive may matter as much as which species they are." },
-      unknown: { status: "draft", questions: [
-        "Are communities assembled mainly by niche differences or by neutral processes, or is that dichotomy itself the wrong question?",
-        "How predictable is community assembly, if priority effects can send identical starting conditions down different paths?",
-        "Can modern coexistence theory be tested in diverse natural communities, where measuring every pairwise interaction is impossible?"
-      ] },
+      unknown: null,
       image: { file: "images/week04-bci-plot.jpg", alt: "Forest plot on Barro Colorado Island, Panama.", caption: "The forest dynamics plot on Barro Colorado Island, Panama.", credit: "" },
       schematic: null,
       readings: [
@@ -205,11 +189,7 @@ window.COURSE = {
       concepts: ["Natural selection", "local adaptation", "the Lande-Arnold statistical framework", "selection gradients",
                  "heritability", "phenotypic plasticity", "measuring selection in the wild", "paradox of stasis"],
       intro: { status: "draft", text: "Darwin thought natural selection too slow to watch. Boag and Grant (1981) and Losos et al. (1997) showed otherwise, documenting intense selection and adaptive differentiation within a handful of years, a shift that Reznick, Losos and Travis (2019) describe as evolution moving from low to high gear. But if selection in the wild is often strong, why do so many traits stay put for so long? Four decades after Lande and Arnold gave us the tools to measure selection, Svensson (2023) asks what those measurements have taught us, returning us to the paradox of stasis." },
-      unknown: { status: "draft", questions: [
-        "If selection in the wild is often strong, why is stasis so common? Is the gap explained by fluctuating selection, by stabilizing selection we fail to detect, or by how we measure?",
-        "Does selection always beget evolution? With heritability and phenotypic plasticity both in play, how well can selection measured in the field predict the response?",
-        "How representative are the populations in which selection has been measured, and what are we missing by studying the organisms that are easiest to catch?"
-      ] },
+      unknown: null,
       image: { file: "images/week05-gould-finches-1845.jpg",
                alt: "John Gould's engraving of four Galapagos finch heads with beaks of different sizes, from Darwin's Journal of Researches.",
                caption: "Galapagos finch heads, from the second edition of Darwin's Journal of Researches (1845).",
@@ -232,11 +212,7 @@ window.COURSE = {
                  "adaptive divergence", "resource partitioning", "parallel and convergent evolution", "adaptive landscape",
                  "non-adaptive radiation"],
       intro: { status: "draft", text: "Why do some lineages diversify into dozens of ecologically distinct species while their close relatives do not? The answer canonized by Simpson, and made the centerpiece of an ecological theory by Schluter (1996, 2000), is ecological opportunity, but Stroud and Losos (2016) ask what that opportunity actually is and why it does not always lead to radiation. Not every radiation is adaptive, either; Rundell and Price (2009) separate the two, forcing the question of how much diversity reflects ecological divergence at all. The Grants (2024) follow Darwin's finches from microcosm to macrocosm, asking how selection measured in single populations scales up to the radiation of an entire clade." },
-      unknown: { status: "draft", questions: [
-        "Why does ecological opportunity trigger adaptive radiation in some lineages but not in others?",
-        "Can the selection we measure over years in single populations account for radiations that unfold over vastly longer timescales?",
-        "When lineages converge on the same forms, does that reflect shared peaks on the adaptive landscape, or shared constraints?"
-      ] },
+      unknown: null,
       image: { file: "images/week06-anolis-ecomorphs.jpg", alt: "Anolis lizard ecomorphs.", caption: "Anolis ecomorphs.", credit: "" },
       schematic: { file: "assets/img/schematics/adaptive-landscape.svg",
                    alt: "Contour map of a fitness landscape over two trait axes, with two adaptive peaks separated by a valley.",
@@ -257,11 +233,7 @@ window.COURSE = {
                  "endemism", "dispersal limitation", "vicariance", "range expansions and contractions",
                  "geology and biodiversity (Wallace's Line, plate tectonics)"],
       intro: { status: "draft", text: "Wallace (1876) divided the world into zoogeographical regions, recognizing that where animals live carries the signature of geological history. The latitudinal diversity gradient is one of the most general patterns in ecology, yet MacArthur (1965) and Pianka (1966) were already weighing competing explanations for it 60 years ago, and none has won. Janzen (1967) asked a sharper question. If tropical organisms experience little seasonal change in temperature, a mountain pass of a given height should be a greater barrier in the tropics than in the temperate zone, linking thermal physiology to dispersal limitation in a single, testable argument." },
-      unknown: { status: "draft", questions: [
-        "Why are there more species in the tropics? Is the gradient driven mainly by faster diversification, by more time, or by lower extinction, and can these ever be separated?",
-        "Do narrower thermal tolerances make tropical mountains stronger barriers to dispersal, and therefore more effective engines of speciation, as Janzen's (1967) logic might imply?",
-        "How will range expansions and contractions under a changing climate reshape the regions Wallace (1876) mapped?"
-      ] },
+      unknown: null,
       image: { file: "images/week07-wallace-regions-1876.jpg",
                alt: "Alfred Russel Wallace's world map of zoogeographical regions, from The Geographical Distribution of Animals.",
                caption: "Wallace's map of the world's zoogeographical regions, frontispiece to The Geographical Distribution of Animals (1876).",
@@ -281,11 +253,7 @@ window.COURSE = {
       concepts: ["Dispersal", "colonization", "extinction", "island syndrome", "equilibrium theory", "species-area relationships",
                  "isolation effects", "disharmonious faunas", "relaxation curves", "nested subsets"],
       intro: { status: "draft", text: "Why should a small, remote island hold fewer species than a large one close to the mainland? MacArthur and Wilson (1963) reduced the answer to a balance between colonization and extinction, predicting that species number depends on area and isolation rather than on the identities of the species themselves. Losos and Schluter (2000) asked what happens when islands are large enough for speciation to add species from within, revealing an evolutionary species-area relationship. Helmus, Mahler and Losos (2014) and Valente et al. (2020) carry the theory forward, testing whether it still holds in the Anthropocene and across the island birds of the world." },
-      unknown: { status: "draft", questions: [
-        "Is island diversity ever truly at equilibrium, or are most islands still relaxing from past changes in area and connection?",
-        "As islands grow larger and more isolated, at what point does in situ speciation overtake colonization as the main source of new species?",
-        "When humans move species among islands, what sets the new equilibrium?"
-      ] },
+      unknown: null,
       image: { file: "images/week08-bahamas-cay.jpg", alt: "A small cay in the Bahamas.", caption: "A small Bahamian cay.", credit: "" },
       schematic: { file: "assets/img/schematics/island-equilibrium.svg",
                    alt: "Graph of immigration and extinction rate curves against number of species. Immigration curves for near and far islands fall with species number; extinction curves for small and large islands rise. Their crossings mark the equilibrium number of species.",
@@ -304,11 +272,7 @@ window.COURSE = {
       concepts: ["Phylogenetic reconstruction", "measuring phylogenetic diversity", "trait evolution", "over- and underdispersion",
                  "phylogenetic signal", "comparative methods", "diversification rates", "key innovations and diversity"],
       intro: { status: "draft", text: "Species are not independent data points. Felsenstein (1985) showed that comparisons across species must account for shared ancestry, turning comparative biology into a phylogenetic discipline. Losos (2011) warns against the opposite error, asking how much a phylogeny alone can tell us about the processes that produced it. Rabosky (2017) applies that caution to one of the field's favorite stories, the key innovation, highlighting how hard it is to show that a trait caused a burst of diversification." },
-      unknown: { status: "draft", questions: [
-        "Do key innovations cause exceptional diversification, or are we mostly detecting the lineages that happened to radiate?",
-        "Can rates of speciation and extinction be estimated reliably from phylogenies of living species alone?",
-        "When a community is phylogenetically over- or underdispersed, how do we know whether that reflects competition, environmental filtering, or simply history?"
-      ] },
+      unknown: null,
       image: { file: "images/week09-haeckel-tree-1866.jpg",
                alt: "Ernst Haeckel's 1866 branching tree of life, dividing organisms into plants, protists, and animals.",
                caption: "Haeckel's 1866 tree of life, shown here as a historical object. Haeckel also promoted racist and eugenic ideas, which this course does not endorse.",
@@ -327,11 +291,7 @@ window.COURSE = {
       concepts: ["Tinbergen's four questions", "adaptive behavior", "phenotypic plasticity", "behavioral syndromes",
                  "ecological and evolutionary consequences of behavior", "sociality", "altruism", "inclusive fitness", "kin selection"],
       intro: { status: "draft", text: "Ask why a bird sings and you can get four correct answers. Tinbergen (1963) separated them into his four questions (mechanism, development, function, and evolutionary history), arguing that a full account of behavior needs every one. Hamilton (1963) took on a puzzle that troubled Darwin: how can selection favor behavior that helps others at a cost to the actor? Gould and Lewontin (1979) then asked whether we too readily assume that every trait is an adaptation, a critique that still shadows adaptive explanations of behavior." },
-      unknown: { status: "draft", questions: [
-        "Does behavior speed up evolution by exposing animals to new selective pressures, or slow it down by letting them sidestep selection through plasticity?",
-        "How do behavioral syndromes evolve, and do they constrain adaptive behavior or make it possible?",
-        "When is inclusive fitness the most useful framework for explaining sociality, and when do other approaches do better?"
-      ] },
+      unknown: null,
       image: { file: "images/week10-san-marco-pendentives.jpg", alt: "The pendentives beneath the domes of the Basilica of San Marco, Venice.",
                caption: "Pendentives of San Marco, Venice, the \"spandrels\" of Gould and Lewontin (1979).", credit: "" },
       schematic: null,
@@ -349,11 +309,7 @@ window.COURSE = {
                  "contemporary evolution", "community and ecosystem consequences of evolution",
                  "anthropogenic selective pressures", "predictive frameworks"],
       intro: { status: "draft", text: "If evolution can happen on ecological timescales, then it can feed back to change ecology itself. Pelletier, Garant and Hendry (2009) laid out this eco-evolutionary view, and Travis et al. (2014) ask whether such feedbacks actually help us understand nature, drawing on long-term studies of the Trinidadian guppy. The answer is not obvious. Bassar et al. (2021) call for a more precise and accurate view of eco-evolution, pressing us to ask when evolutionary change is large enough, and fast enough, to matter for communities and ecosystems." },
-      unknown: { status: "draft", questions: [
-        "How common are eco-evolutionary feedbacks in nature, and are they strong enough outside a handful of model systems to change ecological outcomes?",
-        "Can we build predictive frameworks for evolution under anthropogenic selective pressures, or is contemporary evolution too contingent to forecast?",
-        "When ecology and evolution run on the same clock, which one is driving the other?"
-      ] },
+      unknown: null,
       image: { file: "images/week11-trinidad-stream.jpg", alt: "A stream in the Northern Range of Trinidad.", caption: "A Trinidadian stream.", credit: "" },
       schematic: { file: "assets/img/schematics/eco-evo-feedback.svg",
                    alt: "Two-node loop diagram: ecological change drives evolutionary change, and evolutionary change feeds back to drive ecological change.",

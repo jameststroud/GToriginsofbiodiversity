@@ -53,15 +53,24 @@ announcement: {
 
 Set `show: true` to display a slim gold banner at the top of every page. Set `show: false` to hide it.
 
-## 4. Approve a drafted intro or "What we don't know" panel
+## 4. Approve a drafted framing paragraph
 
-Each of Weeks 1 to 11 has a drafted **framing paragraph** (`intro`) and **open questions** (`unknown`). Drafts are **hidden from students**.
+Each of Weeks 1 to 11 has a drafted **framing paragraph** (`intro`). Drafts are **hidden from students**.
 
 1. **Preview:** open [`drafts.html`](https://www.thestroudlab.com/GToriginsofbiodiversity/drafts.html) to read every draft on one page, or add `&drafts=1` to a week page address, for example `week.html?n=5&drafts=1`. Drafts appear with an amber "DRAFT, not visible to students" badge.
-2. **Edit** the `text` (or the `questions`) in that week's entry in `course.js`.
+2. **Edit** the `text` in that week's `intro` in `course.js`.
 3. **Approve:** change `status: "draft"` to `status: "approved"`. Commit. It now shows to everyone.
 
-The intro and the questions are approved separately. **Note:** drafts are hidden on the site, but anyone who opens `course.js` in this public repository can read them.
+**Note:** drafts are hidden on the site, but anyone who opens `course.js` in this public repository can read them.
+
+**Optional "What we don't know" panel.** Each week has `unknown: null`, so no panel shows. To add one, replace `null` with:
+
+```js
+unknown: { status: "approved", questions: [
+  "First open question?",
+  "Second open question?"
+] },
+```
 
 ## 5. Assign graduate presenters
 
