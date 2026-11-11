@@ -85,7 +85,7 @@ Statuses: **confirmed** (syllabus matches the record), **corrected** (site uses 
 
 ## Drafted text
 
-The framing paragraphs and "What we don't know" questions are new text, written for this site from each week's concepts and readings, and they are all `status: "draft"`. They name only the assigned readings plus people named in the prompt's voice rules (Darwin, Simpson, Lande and Arnold, the Grants, MacArthur and Wilson). Claims to check before approving:
+The framing paragraphs are new text, written for this site from each week's concepts and readings, and they are all `status: "draft"`. (The drafted "What we don't know" questions were removed from the site on November 11, 2026, at the instructors' request.) They name only the assigned readings plus people named in the prompt's voice rules (Darwin, Simpson, Lande and Arnold, the Grants, MacArthur and Wilson). Claims to check before approving:
 
 | Week | Claim in draft | Basis |
 |---|---|---|
