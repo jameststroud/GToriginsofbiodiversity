@@ -12,6 +12,8 @@ name: Check and build site
 
 on:
   push:
+    branches-ignore:
+      - pr-screenshots   # holds PR screenshots only, no site
   pull_request:
   schedule:
     - cron: "17 9 * * *"   # every day at 09:17 UTC (about 5 am in Atlanta)
@@ -29,11 +31,11 @@ jobs:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install the PDF text checker
