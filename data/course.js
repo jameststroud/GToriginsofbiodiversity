@@ -207,7 +207,7 @@ window.COURSE = {
                    caption: "Modes of selection. Each panel shows a trait distribution (shaded) and a fitness function (line): directional, stabilizing, and disruptive. Schematic drawn for this course." },
       readings: [
         { authors: "Boag, P.T. & Grant, P.R.", year: 1981, title: "Intense natural selection in a population of Darwin's finches (Geospizinae) in the Galápagos", source: "Science 214(4516):82-85", doi: "10.1126/science.214.4516.82", pdf: "readings/week-05/boag-grant-1981.pdf" },
-        { authors: "Losos, J.B., Warheitt, K.I. & Schoener, T.W.", year: 1997, title: "Adaptive differentiation following experimental island colonization in Anolis lizards", source: "Nature 387(6628):70-73", doi: "10.1038/387070a0", pdf: "readings/week-05/losos-1997.pdf" },
+        { authors: "Losos, J.B., Warheit, K.I. & Schoener, T.W.", year: 1997, title: "Adaptive differentiation following experimental island colonization in Anolis lizards", source: "Nature 387(6628):70-73", doi: "10.1038/387070a0", pdf: "readings/week-05/losos-1997.pdf" },
         { authors: "Reznick, D.N., Losos, J. & Travis, J.", year: 2019, title: "From low to high gear: there has been a paradigm shift in our understanding of evolution", source: "Ecology Letters 22(2):233-244", doi: "10.1111/ele.13189", pdf: "readings/week-05/reznick-2019.pdf" },
         { authors: "Svensson, E.I.", year: 2023, title: "Phenotypic selection in natural populations: what have we learned in 40 years?", source: "Evolution 77(7):1493-1504", doi: "10.1093/evolut/qpad077", pdf: "readings/week-05/svensson-2023.pdf" }
       ]
