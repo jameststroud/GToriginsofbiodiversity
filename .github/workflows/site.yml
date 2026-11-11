@@ -1,0 +1,63 @@
+# Checks the course data on every change, and rebuilds the static pages on main.
+#
+# - On every push and pull request: run the safety-net check (tools/check.js)
+#   and a test build. A broken course.js shows a red X with a plain-English message.
+# - On main (pushes, the daily run, or a manual run): rebuild the pages and
+#   commit them back to main. The daily run keeps "This week" current.
+#
+# Loop guard: the rebuild commit is made with the workflow's own token, which
+# GitHub never uses to start another workflow run; the job also skips commits
+# made by the bot, and the commit message carries [skip ci].
+name: Check and build site
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 9 * * *"   # every day at 09:17 UTC (about 5 am in Atlanta)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check-and-build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install the PDF text checker
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - name: Install build tools
+        run: npm ci --no-audit --no-fund
+
+      - name: Check course data
+        run: node tools/check.js
+
+      - name: Build pages
+        run: node tools/build.js
+
+      - name: Save rebuilt pages to main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.html' data/generated-files.js 'readings/*/README.md'
+          if git diff --cached --quiet; then
+            echo "Pages are already up to date."
+          else
+            git commit -m "Rebuild pages [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

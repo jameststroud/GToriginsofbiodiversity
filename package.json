@@ -1,0 +1,13 @@
+{
+  "name": "origins-of-biodiversity-site",
+  "private": true,
+  "description": "Build tools for the course website. Nothing here is loaded by the site itself.",
+  "scripts": {
+    "check": "node tools/check.js",
+    "build": "node tools/build.js"
+  },
+  "devDependencies": {
+    "image-size": "1.1.1",
+    "jsdom": "24.1.1"
+  }
+}

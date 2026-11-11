@@ -2,7 +2,14 @@
 
 # Week 8 readings: Island Biogeography Theory
 
-Upload each PDF to this folder with **exactly** the filename shown. Once it is committed, the PDF button appears on the week page automatically.
+## Before you upload a PDF
+
+1. **The PDF must have selectable text, not a scanned picture of the pages.** Screen readers, search and copy-paste all need real text.
+2. **How to check:** open the PDF and try to select a sentence with your cursor. If you can highlight words, it is fine. If the whole page selects as one picture, it is a scan.
+3. **How to fix a scan:** download the text-based version from the publisher's website (usually the best option); or in Adobe Acrobat use **Scan & OCR** (or **Accessibility → Make accessible**); or ask Georgia Tech's accessibility services for help.
+4. Name the file exactly as listed below, then upload it here (**Add file → Upload files**).
+
+The automatic site check also warns about image-only PDFs after you upload.
 
 | # | Reading | Filename to upload |
 |---|---|---|
