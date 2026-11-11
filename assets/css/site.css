@@ -331,3 +331,19 @@ html { scroll-behavior: smooth; }
   .unknown-panel, .card, .notice { border: 1px solid #999; background: #fff; }
   main { padding: 0; }
 }
+
+/* ---------- Phones: comfortable tap targets and readable small text ---------- */
+@media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
+  .small, figcaption, .week-card .meta, .concept-list .weeks, .notice { font-size: 0.9rem; }
+  .eyebrow { font-size: 0.85rem; }
+  figcaption .credit { font-size: 0.85rem; }
+}
+@media (pointer: coarse) {
+  .btn, .chip-soon { min-height: 40px; padding: 8px 14px; }
+  a.tag { padding: 7px 12px; margin: 0 6px 8px 0; }
+  .az a, .az span { min-width: 36px; padding: 7px 6px; }
+  .pager a { padding: 12px 14px; }
+  .concept-list li { padding: 0.5rem 0; }
+  .concept-list .weeks a { display: inline-block; padding: 4px 0; }
+}
