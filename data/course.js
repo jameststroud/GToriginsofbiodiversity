@@ -192,7 +192,7 @@ window.COURSE = {
                credit: "Figure I from Stuart, Y.E. & Losos, J.B. (2013). Ecological character displacement: glass half full or half empty? Trends in Ecology & Evolution 28(7):402-408. Photos: L. Southcott (A), D. Pfennig (B), S. Meiri (C)." },
       schematic: null,
       readings: [
-        { short: "Character displacement", authors: "Brown, W.L. & Wilson, E.O.", year: 1956, title: "Character displacement", source: "Systematic Zoology 5(2):49-64", doi: "10.2307/2411924", pdf: "readings/week-03/brown-wilson-1956.pdf" },
+        { short: "Character displacement", authors: "Brown, W.L. & Wilson, E.O.", year: 1956, title: "Character displacement", source: "Systematic Zoology 5(2):49-64", doi: "10.2307/2411924", pdf: "readings/week-03/brown-wilson-1956.pdf" }
         { short: "The role of reinforcement in speciation", authors: "Servedio, M.R. & Noor, M.A.F.", year: 2003, title: "The role of reinforcement in speciation: theory and data", source: "Annual Review of Ecology, Evolution, and Systematics 34:339-364", doi: "10.1146/annurev.ecolsys.34.011802.132412", pdf: "readings/week-03/servedio-noor-2003.pdf" },
         { short: "African cichlid fish", authors: "Seehausen, O.", year: 2006, title: "African cichlid fish: a model system in adaptive radiation research", source: "Proceedings of the Royal Society B: Biological Sciences 273(1597):1987-1998", doi: "10.1098/rspb.2006.3539", pdf: "readings/week-03/seehausen-2006.pdf" },
         { short: "Secondary sympatry as a sorting process", authors: "Anderson, S.A.S. & Matute, D.R.", year: 2025, title: "Secondary sympatry as a sorting process", source: "Ecology Letters 28(4):e70108", doi: "10.1111/ele.70108", pdf: "readings/week-03/anderson-matute-2025.pdf" }
