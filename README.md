@@ -53,15 +53,14 @@ announcement: {
 
 Set `show: true` to display a slim gold banner at the top of every page. Set `show: false` to hide it.
 
-## 4. Approve a drafted framing paragraph
+## 4. Edit a week summary
 
-Each of Weeks 1 to 11 has a drafted **framing paragraph** (`intro`). Drafts are **hidden from students**.
+Each of Weeks 1 to 11 opens with a summary paragraph (the `intro` in that week's entry in `data/course.js`). All 11 are **published** (`status: "approved"`) and visible to everyone.
 
-1. **Preview:** open [`drafts.html`](https://www.thestroudlab.com/GToriginsofbiodiversity/drafts.html) to read every draft on one page, or add `&drafts=1` to a week page address, for example `week.html?n=5&drafts=1`. Drafts appear with an amber "DRAFT, not visible to students" badge.
-2. **Edit** the `text` in that week's `intro` in `course.js`.
-3. **Approve:** change `status: "draft"` to `status: "approved"`. Commit. It now shows to everyone.
+1. **Edit** the `text` between the quote marks. If your text needs a double quote inside it, type `\"`; apostrophes are fine as they are.
+2. Commit. The change appears on the live site in a minute or two.
 
-**Note:** drafts are hidden on the site, but anyone who opens `course.js` in this public repository can read them.
+**Hide a summary** (for example, while you rework it): change `"approved"` to `"draft"`. It disappears for students, but you can still preview it with `&drafts=1` on the week's address (for example `week.html?n=5&drafts=1`) or on [`drafts.html`](https://www.thestroudlab.com/GToriginsofbiodiversity/drafts.html), where it carries an amber "DRAFT" badge. Change it back to `"approved"` to publish. Note that draft text is still readable by anyone who opens `course.js` in this public repository.
 
 **Optional "What we don't know" panel.** Each week has `unknown: null`, so no panel shows. To add one, replace `null` with:
 

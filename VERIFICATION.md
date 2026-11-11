@@ -28,7 +28,7 @@ Statuses: **confirmed** (syllabus matches the record), **corrected** (site uses 
 | 4 | Rosindell, Hubbell & Etienne 2011 | The unified neutral theory at age ten. TREE 26:340-348 | **The unified neutral theory of biodiversity and biogeography at age ten.** Trends in Ecology & Evolution 26(7):340-348 | 10.1016/j.tree.2011.03.024 | Crossref | **corrected**: full title |
 | 4 | Fukami 2015 | Historical contingency in community assembly. Ann. Rev. Ecol. Evol. Syst. 46:1-23 | Historical contingency in community assembly**: integrating niches, species pools, and priority effects**. ARES 46:1-23 | 10.1146/annurev-ecolsys-110411-160340 | Crossref | **corrected**: subtitle added |
 | 5 | Boag & Grant 1981 | Science 214(4516), pp.82-85 | Science 214(4516):82-85 (title spelling "Galápagos" as published) | 10.1126/science.214.4516.82 | Crossref | confirmed |
-| 5 | Losos, Warheitt & Schoener 1997 | Losos, J.B., Warheitt, K.I. and Schoener, T.W. Nature 387(6628), pp.70-73 | Same; Nature 387(6628):70-73 | 10.1038/387070a0 | Crossref | confirmed. **Note:** the suspected typo "Warheitt" is how the name appears in the publisher's own record for this paper, so the site keeps it to match the published citation. The author's name is spelled "Warheit" in his other papers (for example Losos et al. 2001, Genetica). Instructors: change it if you prefer the corrected spelling |
+| 5 | Losos, Warheit & Schoener 1997 | Losos, J.B., Warheitt, K.I. and Schoener, T.W. Nature 387(6628), pp.70-73 | Losos, J.B., **Warheit**, K.I. & Schoener, T.W. Nature 387(6628):70-73 | 10.1038/387070a0 | Crossref | **corrected** (November 11, 2026, at the instructors' request): "Warheitt" appears in the publisher's own record for this paper, but the author's name is Warheit (as in his other papers, for example Losos et al. 2001, Genetica). The site uses the correct spelling; searches on the publisher's site may need the misspelling |
 | 5 | Reznick, Losos & Travis 2019 | From low to high gear: a paradigm shift in our understanding of evolution. Ecology Letters 22:233-244 | From low to high gear: **there has been a** paradigm shift in our understanding of evolution. Ecology Letters 22(2):233-244 | 10.1111/ele.13189 | Crossref | **corrected**: title. Published online 2018, in the 2019 print volume; year 2019 kept |
 | 5 | Svensson 2023 | Evolution 77:1493-1504 | Evolution 77(7):1493-1504 | 10.1093/evolut/qpad077 | Crossref | confirmed |
 | 6 | Schluter 1996 | Amer. Nat. 148:S40-S64 | The American Naturalist 148 (Supplement):S40-S64 | 10.1086/285901 | Crossref | confirmed |
@@ -54,7 +54,7 @@ Statuses: **confirmed** (syllabus matches the record), **corrected** (site uses 
 | 11 | Pelletier, Garant & Hendry 2009 | Phil. Trans. R. Soc. B 364:1483-1489 | Phil. Trans. R. Soc. B 364(1523):1483-1489 | 10.1098/rstb.2009.0027 | Crossref | confirmed |
 | 11 | Bassar et al. 2021 | Towards a more precise and accurate view of eco-evolution. Ecology Letters 24:623-625 | Same; Ecology Letters 24(4):623-625 | 10.1111/ele.13712 | Crossref | confirmed. The published title sets "and accurate" between dashes; the site keeps the syllabus wording without them (house style) |
 
-**Totals:** 43 readings. 39 DOIs found and confirmed on Crossref. 4 have no DOI (Darwin x2, Coyne & Orr, Wallace). 12 citations corrected. 4 could not be verified here.
+**Totals:** 43 readings. 39 DOIs found and confirmed on Crossref. 4 have no DOI (Darwin x2, Coyne & Orr, Wallace). 13 citations corrected. 4 could not be verified here.
 
 ## Other facts and dates
 
