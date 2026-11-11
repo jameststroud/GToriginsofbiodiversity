@@ -175,7 +175,7 @@
     if (img.caption || img.credit) {
       cap = "<figcaption>" + esc(img.caption) + (img.credit ? '<span class="credit">' + esc(img.credit) + "</span>" : "") + "</figcaption>";
     }
-    return '<figure class="figure-img ' + (cls || "") + '" data-hide-if-missing><img src="' + esc(img.file) + '" alt="' + esc(img.alt || img.caption || "") + '" loading="lazy">' + cap + "</figure>";
+    return '<figure class="figure-img ' + (cls || "") + (img.tall ? " tall" : "") + '" data-hide-if-missing><img src="' + esc(img.file) + '" alt="' + esc(img.alt || img.caption || "") + '" loading="lazy">' + cap + "</figure>";
   }
   function wireMissingImages(root) {
     (root || document).querySelectorAll("[data-hide-if-missing] img").forEach(function (im) {
@@ -268,11 +268,11 @@
     var b = h.banner;
     main.innerHTML =
       '<div class="wrap">' +
-      '<figure class="home-banner" data-hide-if-missing><div class="frame"><img src="' + esc(b.file) + '" alt="' + esc(b.alt) + '"></div>' +
-      "<figcaption>" + esc(b.caption) + ' <span class="credit">' + esc(b.credit) + "</span></figcaption></figure>" +
       '<p class="course-line"><strong>' + esc(c.codes) + " · " + esc(c.term) + " · " + esc(c.institution) + "</strong></p>" +
       '<p class="course-line">' + esc(c.meets) + " · Room: " + esc(c.room) + "</p>" +
-      '<section class="hero" aria-label="Course question"><p class="hero-q">' + esc(h.heroQuestion) + '</p><p class="hero-credit">' + esc(h.heroCredit) + "</p></section>" +
+      '<section class="hero" aria-label="Course question"><div class="hero-text"><p class="hero-q">' + esc(h.heroQuestion) + '</p><p class="hero-credit">' + esc(h.heroCredit) + "</p></div>" +
+      '<figure class="hero-fig" data-hide-if-missing><img src="' + esc(b.file) + '" alt="' + esc(b.alt) + '">' +
+      "<figcaption>" + esc(b.caption) + ' <span class="credit">' + esc(b.credit) + "</span></figcaption></figure></section>" +
       '<section class="card this-week" aria-label="This week">' + card + "</section>" +
       '<section aria-labelledby="scope-h"><h2 id="scope-h">Course scope and objectives</h2><div class="prose">' +
       h.scope.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") +
@@ -349,7 +349,7 @@
     parts.push('<p class="breadcrumb"><a href="' + carry("schedule.html") + '">← Schedule</a></p>');
     parts.push('<header class="week-head" style="--band:' + themeColor(w.theme) + '"><p class="dates-line">Week ' + w.n + " · " + esc(weekDates(w)) + "</p>" +
       "<h1>" + esc(w.title) + "</h1>" + (C.themes[w.theme] && w.theme !== "exam" ? '<p class="theme-name">' + esc(C.themes[w.theme].label) + "</p>" : "") + "</header>");
-    parts.push(figureHTML(w.image));
+    (w.images || (w.image ? [w.image] : [])).forEach(function (im) { parts.push(figureHTML(im)); });
     if (visible(w.intro)) {
       parts.push('<div class="intro' + (isApproved(w.intro) ? "" : " is-draft") + '">' + draftBadge(w.intro) + "<p>" + esc(w.intro.text) + "</p></div>");
     }
